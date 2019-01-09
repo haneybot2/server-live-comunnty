@@ -35,7 +35,7 @@ client.on("ready", () => {
                                     ]
                               }
                         }));
-                        newMember.guild.members.find(m => m.roles.get("532215364617109514")).forEach(member => member.send({
+                        newMember.guild.members.filter(m => m.roles.get("532215364617109514")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
@@ -47,7 +47,7 @@ client.on("ready", () => {
                                     ]
                               }
                         }));
-                        newMember.guild.members.find(m => m.roles.get("532215366366265355")).forEach(member => member.send({
+                        newMember.guild.members.filter(m => m.roles.get("532215366366265355")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
@@ -59,7 +59,7 @@ client.on("ready", () => {
                                     ]
                               }
                         }));
-                        newMember.guild.members.find(m => m.roles.get("532215369650274314")).forEach(member => member.send({
+                        newMember.guild.members.filter(m => m.roles.get("532215369650274314")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
