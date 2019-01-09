@@ -20,6 +20,7 @@ client.on("ready", () => {
             if (!size || currentSize !== size) channel.setName(`Voice ᎢᎡ [${currentSize}]`);
 
             const voice = oldMember.guild.channels.get(client.config.channel);
+            const role0 = oldMember.guild.roles.get("531415833465978890");
             if (newMember.voiceChannelID === voice.id) {
                   if (newMember.guild.roles.has(role0.id)) {
                         newMember.guild.members.find(m => m.roles.get("531930142478565376")).forEach(member => member.send({
@@ -65,7 +66,7 @@ client.on("ready", () => {
                                     fields: [
                                           {
                                                 name: "User :",
-                                                value: `<@${oldMember.user.id}>`
+                                                value: `<@${oldMember.id}>`
                                           }
                                     ]
                               }
