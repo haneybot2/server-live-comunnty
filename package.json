@@ -1,0 +1,26 @@
+{
+	"name": "live-commubty",
+	"version": "12.0.0-dev",
+	"description": "A simple discord bot",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run lint && npm run docs:test && npm run lint:typings",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/haneeesameee/OK-Discored.js-Bot.git"
+	},
+	"author": "RedDead",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/haneeesameee/OK-Discored.js-Bot/issues"
+	},
+	"homepage": "https://github.com/haneeesameee/OK-Discored.js-Bot#readme",
+	"dependencies": {
+		"discord.js": "^11.4.2"		
+	},
+	"engines": {
+		"node": ">=8.0.0"
+	}
+}
