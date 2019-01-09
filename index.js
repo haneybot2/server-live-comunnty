@@ -19,12 +19,59 @@ client.on("ready", () => {
             const size = channel.name.match(/\[\s(\d+)\s\]/);
             if (!size || currentSize !== size) channel.setName(`Voice ᎢᎡ [${currentSize}]`);
 
-            // const voice = oldMember.guild.channels.get(client.config.channel);
-            // const role1 = oldMember.guild.roles.get("531930142478565376");
-            // const role2 = oldMember.guild.roles.get("532215364617109514");
-            // const role3 = oldMember.guild.roles.get("532215366366265355");
-            // const role4 = oldMember.guild.roles.get("532215369650274314");
-            // const role0 = oldMember.guild.roles.get("531415833465978890");
+            const voice = oldMember.guild.channels.get(client.config.channel);
+            if (newMember.voiceChannelID === voice.id) {
+                  if (newMember.guild.roles.has(role0.id)) {
+                        newMember.guild.members.find(m => m.roles.get("531930142478565376")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ]
+                              }
+                        }));
+                        newMember.guild.members.find(m => m.roles.get("532215364617109514")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ]
+                              }
+                        }));
+                        newMember.guild.members.find(m => m.roles.get("532215366366265355")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ]
+                              }
+                        }));
+                        newMember.guild.members.find(m => m.roles.get("532215369650274314")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.user.id}>`
+                                          }
+                                    ]
+                              }
+                        }));
+                  }
+            }
             // const userMember = oldMember.guild.members.filter(m =>m.id =  m.voiceChannel && oldMember.guild.member(m).roles.has(role0.id)).voiceChannel;
             // if (userMember.id === voice.id) {
             //       oldMember.guild.members.filter(m => m.roles.has(role1)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
