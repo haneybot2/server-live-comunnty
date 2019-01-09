@@ -13,24 +13,24 @@ client.on("ready", () => {
 
 
 })
-      .on("voiceStateUpdate", (oldMember, newMember) => {
-            const channel = oldMember.guild.channels.get(client.config.voiceOnline);
-            const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
-            const size = channel.name.match(/\[\s(\d+)\s\]/);
-            if (!size || currentSize !== size) channel.setName(`Voice ᎢᎡ [${currentSize}]`);
+      // .on("voiceStateUpdate", (oldMember, newMember) => {
+      //       const channel = oldMember.guild.channels.get(client.config.voiceOnline);
+      //       const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
+      //       const size = channel.name.match(/\[\s(\d+)\s\]/);
+      //       if (!size || currentSize !== size) channel.setName(`Voice ᎢᎡ [${currentSize}]`);
 
-            const voice = oldMember.guild.channels.get(client.config.channel);
-            const role1 = oldMember.guild.roles.get("531930142478565376");
-            const role2 = oldMember.guild.roles.get("532215364617109514");
-            const role3 = oldMember.guild.roles.get("532215366366265355");
-            const role4 = oldMember.guild.roles.get("532215369650274314");
-            const role0 = oldMember.guild.roles.get("531415833465978890");
-            const userMember = oldMember.guild.members.filter(m =>m.id =  m.voiceChannel && oldMember.guild.member(m).roles.has(role0.id)).voiceChannel;
-            if (userMember.id === voice.id) {
-                  oldMember.guild.members.filter(m => m.roles.has(role1)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-                  oldMember.guild.members.filter(m => m.roles.has(role2)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-                  oldMember.guild.members.filter(m => m.roles.has(role3)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-                  oldMember.guild.members.filter(m => m.roles.has(role4)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-            }
-      })
+      //       const voice = oldMember.guild.channels.get(client.config.channel);
+      //       const role1 = oldMember.guild.roles.get("531930142478565376");
+      //       const role2 = oldMember.guild.roles.get("532215364617109514");
+      //       const role3 = oldMember.guild.roles.get("532215366366265355");
+      //       const role4 = oldMember.guild.roles.get("532215369650274314");
+      //       const role0 = oldMember.guild.roles.get("531415833465978890");
+      //       const userMember = oldMember.guild.members.filter(m =>m.id =  m.voiceChannel && oldMember.guild.member(m).roles.has(role0.id)).voiceChannel;
+      //       if (userMember.id === voice.id) {
+      //             oldMember.guild.members.filter(m => m.roles.has(role1)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
+      //             oldMember.guild.members.filter(m => m.roles.has(role2)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
+      //             oldMember.guild.members.filter(m => m.roles.has(role3)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
+      //             oldMember.guild.members.filter(m => m.roles.has(role4)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
+      //       }
+      // })
       .login(client.config.TOKEN)
