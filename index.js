@@ -23,7 +23,7 @@ client.on("ready", () => {
             const role0 = oldMember.guild.roles.get("531415833465978890");
             if (newMember.voiceChannelID === voice.id) {
                   if (newMember.guild.roles.has(role0.id)) {
-                        newMember.guild.members.find(m => m.roles.get("531930142478565376")).forEach(member => member.send({
+                        newMember.guild.members.filter(m => m.roles.get("531930142478565376")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
