@@ -25,7 +25,7 @@ client.on("ready", () => {
             const role3 = oldMember.guild.roles.get("532215366366265355");
             const role4 = oldMember.guild.roles.get("532215369650274314");
             const role0 = oldMember.guild.roles.get("531415833465978890");
-            const userMember = oldMember.guild.filter(m => m.roles.has(role0.id));
+            const userMember = oldMember.guild.members.filter(m => m.roles.has(role0.id));
             if (userMember.id === voice.id) {
                   oldMember.guild.members.filter(m => m.roles.has(role1)).send(`هناك مواطن في غرفة الدعم الفني يحتاج الى المساعدة`);
                   oldMember.guild.members.filter(m => m.roles.has(role2)).send(`هناك مواطن في غرفة الدعم الفني يحتاج الى المساعدة`);
