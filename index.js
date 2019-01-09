@@ -22,63 +22,200 @@ client.on("ready", () => {
             const voice = oldMember.guild.channels.get(client.config.channel);
             const role0 = oldMember.guild.roles.get("531415833465978890");
             if (newMember.voiceChannelID === voice.id) {
-                  if (newMember.guild.roles.has(role0.id)) {
-                        newMember.guild.members.filter(m => m.roles.get("531930142478565376")).forEach(member => member.send({
+                  if (oldMember.guild.roles.has(role0.id)) {
+                        newMember.guild.members.filter(m => m.roles.get("515528767272386561")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
                                     fields: [
                                           {
                                                 name: "User :",
                                                 value: `<@${oldMember.id}>`
                                           }
-                                    ]
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
+                              }
+                        }));
+                        newMember.guild.members.filter(m => m.roles.get("531930530015608836")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
+                              }
+                        }));
+                        newMember.guild.members.filter(m => m.roles.get("531930530925772811")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
+                              }
+                        }));
+                        newMember.guild.members.filter(m => m.roles.get("531933725664084018")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
+                              }
+                        }));
+                        newMember.guild.members.filter(m => m.roles.get("531930142478565376")).forEach(member => member.send({
+                              embed: {
+                                    color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
+                                    title: "هناك مواطن غير مفعل في غرفة الانتظار",
+                                    fields: [
+                                          {
+                                                name: "User :",
+                                                value: `<@${oldMember.id}>`
+                                          }
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
                               }
                         }));
                         newMember.guild.members.filter(m => m.roles.get("532215364617109514")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
                                     fields: [
                                           {
                                                 name: "User :",
                                                 value: `<@${oldMember.id}>`
                                           }
-                                    ]
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
                               }
                         }));
                         newMember.guild.members.filter(m => m.roles.get("532215366366265355")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
                                     fields: [
                                           {
                                                 name: "User :",
                                                 value: `<@${oldMember.id}>`
                                           }
-                                    ]
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
                               }
                         }));
                         newMember.guild.members.filter(m => m.roles.get("532215369650274314")).forEach(member => member.send({
                               embed: {
                                     color: 0x36393e,
+                                    author: {
+                                          name: member.user.username,
+                                          icon_url: member.user.displayAvatarURL
+                                    },
+                                    thumbnail: {
+                                          url: oldMember.user.displayAvatarURL
+                                    },
                                     title: "هناك مواطن غير مفعل في غرفة الانتظار",
                                     fields: [
                                           {
                                                 name: "User :",
                                                 value: `<@${oldMember.id}>`
                                           }
-                                    ]
+                                    ],
+                                    footer: {
+                                          text: oldMember.user.tag,
+                                          icon_url: oldMember.user.displayAvatarURL
+                                    },
+                                    timestamp: new Date()
                               }
                         }));
                   }
             }
-            // const userMember = oldMember.guild.members.filter(m =>m.id =  m.voiceChannel && oldMember.guild.member(m).roles.has(role0.id)).voiceChannel;
-            // if (userMember.id === voice.id) {
-            //       oldMember.guild.members.filter(m => m.roles.has(role1)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-            //       oldMember.guild.members.filter(m => m.roles.has(role2)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-            //       oldMember.guild.members.filter(m => m.roles.has(role3)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-            //       oldMember.guild.members.filter(m => m.roles.has(role4)).send(`هناك مواطن غير مفعل في غرفة الانتظار`);
-            // }
       })
       .login(client.config.TOKEN)
