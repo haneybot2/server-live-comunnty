@@ -1,8 +1,10 @@
 const { Client } = require("discord.js");
 const client = new Client();
 client.config = require("./config.js");
-
-client.on("message", async message => {
+client.on("ready", () => {
+      console.log("ready man");
+})
+.on("message", async message => {
       if (message.author.bot) return;
       if (message.channel.type === "dm") return;
       const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
