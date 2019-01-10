@@ -10,6 +10,8 @@ client.on("ready", () => {
       const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
       command = args.shift().toLowerCase();
 
+      
+
 })
       .on("voiceStateUpdate", (oldMember, newMember) => {
             const channel = oldMember.guild.channels.get(client.config.voiceOnline);
