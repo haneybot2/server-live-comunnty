@@ -4,15 +4,30 @@ client.config = require("./config.js");
 client.on("ready", () => {
       console.log("ready man");
 })
-.on("message", async message => {
-      if (message.author.bot) return;
-      if (message.channel.type === "dm") return;
-      const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
-      command = args.shift().toLowerCase();
+      .on("message", async message => {
+            if (message.author.bot) return;
+            if (message.channel.type === "dm") return;
+            const prefixa = "";
+            const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
+            command = args.shift().toLowerCase();
+            const argsa = message.content.slice(prefixa.length).trim().split(/ +/g);
+            commanda = argsa.shift().toLowerCase();
 
-      
-
-})
+            if (commanda === "رابط" || command === "رابط" || command === "link") {
+                  message.channel.createInvite({
+                        thing: true,
+                        maxUses: 5,
+                        maxAge: 86400
+                  }).then(link => {
+                        try {
+                              message.channel.send("**:link:  تم ارسال الرابط على الخاص  **");
+                              message.author.send(`**مدة الرابط : يوم واحد\nعدد استخدامات الرابط : 10\n\n*****link:***\n${link.url}`);
+                        } catch (error) {
+                              message.channel.send("**اعتذر منك , ولكن اعدادات الخصوصية لديك تمنعني من ارسال الرابط لك**");
+                        }
+                  });
+            }
+      })
       .on("voiceStateUpdate", (oldMember, newMember) => {
             const channel = oldMember.guild.channels.get(client.config.voiceOnline);
             const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
