@@ -21,7 +21,7 @@ client.on("ready", () => {
                   }).then(link => {
                         try {
                               message.channel.send("**:link:  تم ارسال الرابط على الخاص  **");
-                              message.author.send(`**مدة الرابط : يوم واحد\nعدد استخدامات الرابط : 10\n\n*****link:***\n${link.url}`);
+                              message.author.send(`**مدة الرابط : يوم واحد\nعدد استخدامات الرابط : 10**\n${message.author}\n\n***link:***\n${link.url}`);
                         } catch (error) {
                               message.channel.send("**اعتذر منك , ولكن اعدادات الخصوصية لديك تمنعني من ارسال الرابط لك**");
                         }
