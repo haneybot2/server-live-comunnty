@@ -36,8 +36,8 @@ client.on("ready", () => {
 
             if(oldMember.serverMute === false && newMember.serverMute === true) return;
             if(oldMember.serverMute === true && newMember.serverMute === false) return;
-            if(voiceOld.serverDeaf === false && voiceNew.serverDeaf === true) return;
-            if(voiceOld.serverDeaf === true && voiceNew.serverDeaf === false) return;
+            if(oldMember.serverDeaf === false && newMember.serverDeaf === true) return;
+            if(oldMember.serverDeaf === true && newMember.serverDeaf === false) return;
       
             const voice = oldMember.guild.channels.get("531906183758479360");
             const role0 = oldMember.guild.roles.get("531415833465978890");
