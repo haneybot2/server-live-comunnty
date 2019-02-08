@@ -34,10 +34,18 @@ client.on("ready", () => {
             const size = channel.name.match(/\[\s(\d+)\s\]/);
             if (!size || currentSize !== size) channel.setName(`Voice ᎢᎡ [${currentSize}]`);
 
-            if(oldMember.serverMute === false && newMember.serverMute === true) return;
-            if(oldMember.serverMute === true && newMember.serverMute === false) return;
-            if(oldMember.serverDeaf === false && newMember.serverDeaf === true) return;
-            if(oldMember.serverDeaf === true && newMember.serverDeaf === false) return;
+            if(oldMember.serverMute === false && newMember.serverMute === true) {
+                  return null;
+            }
+            if(oldMember.serverMute === true && newMember.serverMute === false) {
+                  return null;
+            }
+            if(oldMember.serverDeaf === false && newMember.serverDeaf === true) {
+                  return null;
+            }
+            if(oldMember.serverDeaf === true && newMember.serverDeaf === false) {
+                  return null;
+            }
       
             const voice = oldMember.guild.channels.get("531906183758479360");
             const role0 = oldMember.guild.roles.get("531415833465978890");
