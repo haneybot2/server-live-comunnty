@@ -51,12 +51,8 @@ client.on("ready", () => {
             const role0 = oldMember.guild.roles.get("531415833465978890");
             if (
                   newMember.voiceChannelID === voice.id
-                   && (
-                         (oldMember.serverMute !== false && newMember.serverMute !== true)
-                        || (oldMember.serverMute !== true && newMember.serverMute !== false)
-                        || (oldMember.serverDeaf !== false && newMember.serverDeaf !== true)
-                        || (oldMember.serverDeaf !== true && newMember.serverDeaf !== false)
-                  )
+                  && !(oldMember || newMember).serverMute
+                  && !(oldMember || newMember).serverDeaf
             ) {
                   if (oldMember.guild.roles.has(role0.id)) {
                         newMember.guild.members.filter(m => m.roles.get("515528767272386561")).forEach(member => member.send({
