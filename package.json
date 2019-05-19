@@ -18,7 +18,7 @@
 	},
 	"homepage": "https://github.com/haneeesameee/OK-Discored.js-Bot#readme",
 	"dependencies": {
-		"discord.js": "^11.4.2"		
+		"discord.js": "^11.5.0"		
 	},
 	"engines": {
 		"node": ">=8.0.0"
