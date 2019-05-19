@@ -13,7 +13,7 @@ client.on("ready", () => {
 })
       .on("voiceStateUpdate", (oldMember, newMember) => {
             const Member = (oldMember || newMember);
-			if (newMember.voiceChannel.id === '531906183758479360') {
+			if (newMember.voiceChannelID === '531906183758479360') {
 				if (!newMember.roles.has('483300860424749056') && newMember.roles.has('531415833465978890')) {
 					client.config.roles.forEach(role => {
 						newMember.guild.members.filter(m => m.roles.has(role)).forEach(async mem => {
@@ -33,7 +33,7 @@ client.on("ready", () => {
 					});
 					index.clear();
 				}
-			} else if (newMember.voiceChannel.id === '512917281940963328') {
+			} else if (newMember.voiceChannelID === '512917281940963328') {
 				client.config.roles.forEach(role => {
 					  newMember.guild.members.filter(m => m.roles.has(role)).forEach(async mem => {
 						  if (!index2.has(mem)) {
