@@ -21,7 +21,7 @@ client.on("ready", () => {
 								.setAuthor(newMember.user.username, newMember.user.displayAvatarURL)
 								.setThumbnail(newMember.user.displayAvatarURL)
 								.setTitle("هناك مواطن غير مفعل في غرفة الانتظار")
-								.addField("User :", newMember.usr)
+								.addField("User :", newMember.user)
 								.setFooter(mem.user.tag, mem.user.displayAvatarURL)
 								.setTimestamp()
 							mem.send(embed);
@@ -36,7 +36,7 @@ client.on("ready", () => {
 								.setAuthor(newMember.user.username, newMember.user.displayAvatarURL)
 								.setThumbnail(newMember.user.displayAvatarURL)
 								.setTitle("هناك مواطن لديه مشكلة وينتظر احد ليحلها")
-								.addField("User :", newMember.usr)
+								.addField("User :", newMember.user)
 								.setFooter(mem.user.tag, mem.user.displayAvatarURL)
 								.setTimestamp()
 							mem.send(embed);
