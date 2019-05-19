@@ -48,9 +48,9 @@ client.on("ready", () => {
 							mem.send(embed);
 							  await index2.add(mem);
 						  }
-					  });
-					index2.clear();
+					  });					
 				});
+				index2.clear();
 			}
       })
       .login(client.config.TOKEN)
