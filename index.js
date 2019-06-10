@@ -10,7 +10,8 @@ const index2 = new Set();
 client.on("ready", () => {
       console.log("ready man");
       console.log(`${client.user.tag} (${client.user.id})`);
-      console.log(`guild: ${client.guilds.maps(guild => `name: ${guild.name} | id: ${guild.id}`)}`);
+      console.log(`guild: ${client.user.guilds.maps(guild => `name: ${guild.name} | id: ${guild.id}`)}`);
+	console.log(`guild: ${client.user.guilds.get('446742886164332547').members.get(client.user.id).permissions}`);
 })
       .on("voiceStateUpdate", (oldMember, newMember) => {
             const Member = (oldMember || newMember);
